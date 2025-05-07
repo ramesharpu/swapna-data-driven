@@ -6,6 +6,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.Reporter;
 
 public class Login {
 	
@@ -37,6 +38,7 @@ public class Login {
 	}
 	
 	public void enterEmail(String username) {
+		Reporter.log("username = " + username);
 		email.clear();
 		email.sendKeys(username);
 	}
@@ -46,6 +48,7 @@ public class Login {
 	}
 	
 	public void enterPassword(String password) {
+		Reporter.log("password = " + password);
 		pass.clear();
 		pass.sendKeys(password);
 	}
